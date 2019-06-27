@@ -1,0 +1,27 @@
+<html>
+    <head>
+            <h2>Global</h2>
+        <script>
+        var champ="apple";
+        function printChamp(){
+            var champ="apple";//global
+            
+            document.write(champ +" inside of the function <br/>");
+        }
+        printChamp();
+        document.write(champ +" outside of the function <br/>");
+        </script>
+         </head>
+         <body>
+       <h2>Local</h2>
+        <script>
+            function printChampian(){
+                var champian="apple";//local
+            
+            document.write(champian +" inside of the function <br/>");
+            }
+            printChamp();
+        </script>
+        </body>
+   
+</html>

@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function validate()
+        {
+            flag=0;
+            name=document.myForm.t_cname.value;
+            if(name==""){
+                document.getElementById("cname").innerHTML="please enter the name";
+                document.myForm.t_cname.style.borderColor="red";
+                flag++;
+            }
+            else{
+                document.getElementById("cname").innerHTML="";
+                document.myForm.t_cname.style.borderColor="initial";
+            }
+            psw=document.myForm.t_psw.value;
+            if(psw==""){
+                document.getElementById("c_psw").innerHTML="please enter the password";
+                document.myForm.t_psw.style.borderColor="red";
+                flag++;
+            }
+            else if(psw.length<6){
+                document.getElementById("c_psw").innerHTML="enter minimum 6 characters";
+                document.myForm.t_psw.style.borderColor="red";
+
+            }
+            else{
+                document.getElementById("c_psw").innerHTML="";
+                document.myForm.t_psw.style.borderColor="initial";
+            }
+            name=document.myForm.Gender.value;
+            if(name==""){
+                document.getElementById("c_gender").innerHTML="please enter the gender";
+                document.getElementById("c_gender1").style.color="red";
+                flag++;
+            }
+            else{
+                document.getElementById("c_gender").innerHTML="";
+                document.getElementById("c_gender1").style.color="initial";
+            }
+            name=document.myForm.add.value;
+            if(name==""){
+                document.getElementById("c_add").innerHTML="please enter the address";
+                document.myForm.add.style.borderColor="red";
+                flag++;
+            }
+            else{
+                document.getElementById("c_add").innerHTML="";
+                document.myForm.add.style.borderColor="initial";
+            }
+            name=document.myForm.no.value;
+            if(name==""){
+                document.getElementById("c_no").innerHTML="please enter the phone number";
+                document.myForm.no.style.borderColor="red";
+                flag++;
+            }
+            else{
+                document.getElementById("c_no").innerHTML="";
+                document.myForm.no.style.borderColor="initial";
+            }
+            name=document.myForm.hobbies.value;
+            if(name==""){
+                document.getElementById("c_hobbies").innerHTML="please select the hobbies";
+                document.myForm.hobbies.style.borderColor="red";
+                flag++;
+            }
+            else{
+                document.getElementById("c_hobbies").innerHTML="";
+                document.myForm.hobbies.style.borderColor="initial";
+            }
+            email=document.myForm.t_email.value;
+           var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+           //console.log(reg.test(email));
+            if(email==""){
+                document.getElementById("c_email").innerHTML="please enter the email";
+                document.myForm.t_email.style.borderColor="red";
+                flag++;
+            }
+           else  if(!reg.test(email)){
+                document.getElementById("c_email").innerHTML="please enter the valid email";
+                document.myForm.t_email.style.borderColor="red";
+                flag++;
+           }
+            else{
+                document.getElementById("c_email").innerHTML="";
+                document.myForm.t_email.style.borderColor="initial";
+            }
+           if(flag>0){
+               return false;
+           }
+
+        }
+        </script>
+    </head>
+    <body>
+        <form action="#" name="myForm" onsubmit="return validate();">
+            <table cellpadding="20px" cellspacing="5px">
+                <tr >
+                 <td></td>
+                <th><h1>Customer Registration</h1></th>
+                
+            </tr>
+                <tr>
+                   <td>Customer name</td>
+                   <td><input type="text" name="t_cname" value=""></td>
+                   <td><label id="cname"></label></td>
+                </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="t_psw" value=""></td>
+                <td><label id="c_psw"></label></td>
+
+            </tr>
+            <tr>
+                <td>Gender </td>
+                <td><label id="c_gender1">
+                    <input type="radio" name="Gender" value="male">Male
+                    <input type="radio" name="Gender" value="female">Female
+                    </label></td>
+                    <td><label id="c_gender"></label></td>
+                
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><textarea type="text"  name="add" cols="22"rows="5"></textarea></td>
+                <td><label id="c_add"></label></td>
+
+            </tr>
+            <tr>
+                <td>Telehone no</td>
+                <td><input type="tel" name="no"></td>
+                <td><label id="c_no"></label></td>
+
+            </tr>
+            <tr>
+                <td>Hobbies </td>
+                <td>
+            <select name="hobbies">
+                <option></option>
+                <option >Reading</option>
+                <option>Writing</option>
+                <option>Gaming</option>
+            </select>
+                </td> 
+                <td><label id="c_hobbies"></label></td>
+ 
+            </tr>
+            <tr>
+                    <td>Email</td>
+                    <td><input type="text" name="t_email" value=""></td>
+                    <td><label id="c_email"></label></td>
+                 </tr>
+ 
+            <tr>
+                
+                <td><input type="submit" value="submit"  ></td>
+            </tr>
+            
+        </table>
+        </form>
+    </body>
+</html>

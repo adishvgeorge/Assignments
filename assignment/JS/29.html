@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <script>
+             function df(){
+                username=document.getElementById("us").value;
+                password=document.getElementById("psw").value;
+
+               if(username=="admin" && password=="admin123"){
+                 return true;
+               }
+               else{
+                 alert("username=admin & password=admin123 ");
+                 return false;
+               }
+             }
+            </script>
+    </head>
+  <body>
+        <form action="another29.html" method="POST" onsubmit="return df();">
+        Name : <input type="text"  value="" id="us"><br><br>
+        Passworld : <input type="password"  value=""id="psw"><br><br>
+        <input type="submit" value="login">
+</form>
+  
+
+  </body>
+</html>
+ 

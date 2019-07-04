@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script>
+            var imgr="f";
+            function baabtra(){
+              var  x=document.getElementById('click');
+                if(imgr=='f'){
+                    x.src='img2.jpg';
+                    imgr='t';
+                }
+                else{
+                    x.src='img1.jpg';
+                    imgr='f';
+                }
+
+            }
+           setTimeout('baabtra()',2000);
+
+           //using time interval
+           //var Timer=setInterval('baabtra()',500);
+            </script>
+    </head>
+    <body>
+            <img src="img1.jpg" id="click" onclick="baabtra();" >
+            <!--time interval calling-->
+    <!-- <img src="img1.jpg" id="click" onclick="clearInterval(Timer);" >-->
+    </body>
+</html>

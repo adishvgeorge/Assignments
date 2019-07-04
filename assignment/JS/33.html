@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function check_info(){
+               var y=document.getElementById('g').checked;
+               var n=document.getElementById('p').checked;
+               //name=document.r_check.ar.value;
+              // if(name==""){
+                  // document.getElementById("err").innerHTML="please choose your gender";
+                   //document.getElementById("err").style.color="red";
+            if(y==false && n==false){
+                document.getElementById("err").innerHTML="Please choose your qualification";
+                document.getElementById("err").style.color="red";
+                   return false;
+               }
+               else{
+                   return true;
+               }
+            }
+        </script>
+        <style>
+            .rad{
+                background-color: aquamarine;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <form class="rad" name="r_check" action="33.1.html" method="POST" onsubmit="return check_info();" >
+            <h1>Ckeck Box Validation</h1>
+        <table>
+        <tr><th>Qualification   :</th>
+           <td> Graduate<input type="checkbox" name="Qualification" Value="Graduate" id="g">
+            Postgraduate<input type="checkbox" name="Qualification" Value="Postgraduate" id="p"><br></td>
+        </tr>
+        <tr><td></td>
+            <td><p id="err"></p></td></tr>
+        <tr>
+           <td align="center"><input type="submit" value="Submit"   > </td> 
+        </tr>
+        </table>
+        </form>
+    </body>
+</html>

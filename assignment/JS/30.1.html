@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <script>
+               function check_info(){
+                var username=document.getElementById("user_name").value;
+                var password=document.getElementById("psw").value;
+
+                if(username=="" || password==""){
+                  alert("please enter the username & password")
+                  return false;
+                }   
+   else if(username=="adish" || password=="123"){
+     return true;
+   }
+   else{
+     alert("username:adish and password:123")
+     return false;
+   }
+               }
+            </script>
+    </head>
+  <body>
+        <form action="another29.html" method="POST" onsubmit="return check_info();">
+        Name : <input type="text"  value="" id="user_name"><br><br>
+        Passworld : <input type="password"  value="" id="psw"><br><br>
+        <input type="submit" value="login">
+</form>
+  
+
+  </body>
+</html>
+ 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <script>
+               function myFunction() {
+                   var x = document.getElementById("my_f").value;
+                   var y = document.getElementById("my_l").value;
+                   var z = document.getElementById("my_e").value;
+                   document.getElementById("demo").innerHTML ="welcome " +x +" "+ y+ "  My Email id is " +z;
+                   
+
+                    }
+            </script>
+    </head>
+  <body>
+        <form>
+        First Name : <input type="text" id="my_f"><br><br>
+        Last Name : <input type="text" id="my_l"><br><br>
+        Email id  : <input type="email" id="my_e"><br><br>
+        Password  : <input type="password" ><br><br>
+        <input type="submit" onclick="myFunction()">
+</form>
+        <p id="demo"></p>
+
+  </body>
+</html>
+ 

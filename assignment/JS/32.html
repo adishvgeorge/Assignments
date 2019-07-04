@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function check_info(){
+               //var y=document.getElementById('a_male').checked;
+               //var n=document.getElementById('a_female').checked;
+               name=document.r_check.ar.value;
+               if(name==""){
+                   document.getElementById("err").innerHTML="please choose your gender";
+                   document.getElementById("err").style.color="red";
+                   //document.r_check.ar.style.color="red";
+                   return false;
+               }
+               else{
+                   return true;
+               }
+            }
+        </script>
+        <style>
+            .rad{
+                background-color: aquamarine;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <form class="rad" name="r_check" action="32.1.html" method="POST" onsubmit="return check_info();" >
+            <h1>Radio Button Validation</h1>
+        <table>
+        <tr><th>Gender   :</th>
+           <td> Male<input type="radio" name="ar" Value="Male" id="a_male">
+            Female<input type="radio" name="ar" Value="Female" id="a_female"><br></td>
+        </tr>
+        <tr><td></td>
+            <td><p id="err"></p></td></tr>
+        <tr>
+           <td align="center"><input type="submit" value="Submit"   > </td> 
+        </tr>
+        </table>
+        </form>
+    </body>
+</html>

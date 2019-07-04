@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function validate()
+        {
+            flag=0;
+            name=document.myForm.t_cname.value;
+            if(name==""){
+                document.getElementById("cname").innerHTML="please enter the name";
+                document.myForm.t_cname.style.borderColor="red";
+                flag++;
+            }
+            else{
+                document.getElementById("cname").innerHTML="";
+                document.myForm.t_cname.style.borderColor="initial";
+            }
+            name=document.myForm.add.value;
+            if(name==""){
+                document.getElementById("c_add").innerHTML="please enter the address";
+                document.myForm.add.style.borderColor="red";
+                flag++;
+            }
+            else{
+                document.getElementById("c_add").innerHTML="";
+                document.myForm.add.style.borderColor="initial";
+            }
+            email=document.myForm.t_email.value;
+           var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+           //console.log(reg.test(email));
+            if(email==""){
+                document.getElementById("c_email").innerHTML="please enter the email";
+                document.myForm.t_email.style.borderColor="red";
+                flag++;
+            }
+           else  if(!reg.test(email)){
+                document.getElementById("c_email").innerHTML="please enter the valid email";
+                document.myForm.t_email.style.borderColor="red";
+                flag++;
+           }
+            else{
+                document.getElementById("c_email").innerHTML="";
+                document.myForm.t_email.style.borderColor="initial";
+            }
+            name=document.myForm.no.value;
+            if(name==""){
+                document.getElementById("c_no").innerHTML="please enter the phone number";
+                document.myForm.no.style.borderColor="red";
+                flag++;
+            }
+            else{
+                document.getElementById("c_no").innerHTML="";
+                document.myForm.no.style.borderColor="initial";
+            }
+            psw=document.myForm.t_psw.value;
+            psw1=document.myForm.t_psw1.value;
+            if(psw==""){
+                document.getElementById("c_psw","c_psw1").innerHTML="please enter the password";
+                document.myForm.t_psw.style.borderColor="red";
+                flag++;
+            }
+            else if(psw.length<6){
+                document.getElementById("c_psw","c_psw1").innerHTML="enter minimum 6 characters";
+                document.myForm.t_psw.style.borderColor="red";
+               flag++;
+            }
+            else if(psw1!==psw){
+                document.getElementById("c_psw","c_psw1").innerHTML="enter same password";
+                document.myForm.t_psw.style.borderColor="red";
+              flag++;
+            }
+            else{
+                document.getElementById("c_psw","c_psw1").innerHTML="";
+                document.myForm.t_psw.style.borderColor="initial";
+            }
+           if(flag>0){
+               return false;
+           }
+
+        }
+        </script>
+        <style>
+        .tab{
+            background-color: aqua;
+            width: 780px;
+        }
+        .nam {
+            width:359px;
+            height: 25px;
+        }
+        </style>
+    </head>
+    <body>
+        <form action="#" name="myForm" onsubmit="return validate();"class="tab">
+            <table cellpadding="20px" cellspacing="8px" >
+                <tr >
+                 <td></td>
+                <th><h1>Student Registration Form</h1></th>
+            </tr>
+                <tr>
+                   <td>Name</td>
+                   <td><input type="text" name="t_cname" value="" class="nam"><label id="cname"></label></td>
+                </tr>
+            <tr>
+                <td>Personal Address</td>
+                <td><input type="text"  name="add" class="nam"><label id="c_add"></label></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="t_email" value=""class="nam"><label id="c_email"></label></td>
+            </tr>
+            <tr>
+                <td>Mobile No</td>
+                <td><input type="tel" name="no"class="nam"><label id="c_no"></label></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="t_psw" value=""class="nam"><label id="c_psw"></label></td>
+            </tr>
+            <tr>
+                <td>Confirm Password</td>
+                <td><input type="password" name="t_psw1" value=""class="nam"><label id="c_psw1"></label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="submit Form"  ></td>
+            </tr>
+            
+        </table>
+        </form>
+    </body>
+</html>

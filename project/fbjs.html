@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>facebook</title>
+    <style>
+    .s{
+        float: left;
+        clear: both;
+        height: 44px;
+        
+    }
+   .f{
+       float: right;
+       font-size: 12px;
+       
+    }
+    .name1{
+        height: 32px;
+        border-radius:7px;
+        font-family: monospace;
+        font-size: 13px;
+        font-weight: 5px;
+    }
+    .text_last{
+        color: #6e7583;
+        font-size: 12px;
+        width: 78px;
+        padding-right: 65px;
+        
+    }
+    .btn{
+        background-color:#669e40;
+        width:202px;
+        height: 36px;
+        text-align: center;
+        border-radius:  5px;
+        border:1px solid #335507;
+        background-image: linear-gradient(  #75b34c,#5d8a39);
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+
+    }
+    a{
+        text-decoration: none;
+        color:blue;
+    }
+   
+    </style>
+
+<script type="text/javascript">
+    function validate_lg()
+    {
+        flag=0;
+        name=document.myForm.c_name.value;
+        if(name==""){
+            document.getElementById("u_name").innerHTML="please enter the name";
+            document.myForm.c_name.style.borderColor="red";
+            flag++;
+        }
+        else{
+            document.getElementById("u_name").innerHTML="";
+            document.myForm.c_name.style.borderColor="initial";
+        }
+        psw=document.myForm.c_psw.value;
+        if(psw==""){
+            document.getElementById("u_psw").innerHTML="please enter the password";
+            document.myForm.c_psw.style.borderColor="red";
+            flag++;
+        }
+        else if(psw.length<6){
+            document.getElementById("u_psw").innerHTML="enter minimum 6 characters";
+            document.myForm.c_psw.style.borderColor="red";
+          return false; 
+        }
+        else{
+            document.getElementById("u_psw").innerHTML="";
+            document.myForm.c_psw.style.borderColor="initial";
+        }
+        if(flag>0){
+        }
+        return true;
+    }
+     function validate()
+      {
+        flag=0;
+        name=document.myForm1.u_first.value;
+        if(name==""){
+            document.getElementById("c_first").innerHTML="please enter the address";
+            document.myForm1.u_first.style.borderColor="red";
+            flag++;
+        }
+        else{
+            document.getElementById("c_first").innerHTML="";
+            document.myForm1.u_first.style.borderColor="initial";
+        }
+        name=document.myForm1.u_last.value;
+        if(name==""){
+            document.getElementById("c_last").innerHTML="please enter the phone number";
+            document.myForm1.u_last.style.borderColor="red";
+            flag++;
+        }
+        else{
+            document.getElementById("c_last").innerHTML="";
+            document.myForm1.u_last.style.borderColor="initial";
+        }
+        email=document.myForm1.u_email.value;
+       var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+       //console.log(reg.test(email));
+        if(email==""){
+            document.getElementById("c_email").innerHTML="please enter the email";
+            document.myForm1.u_email.style.borderColor="red";
+            flag++;
+        }
+       else  if(!reg.test(email)){
+            document.getElementById("c_email").innerHTML="please enter the valid email";
+            document.myForm1.u_email.style.borderColor="red";
+            flag++;
+       }
+        else{
+            document.getElementById("c_email").innerHTML="";
+            document.myForm1.u_email.style.borderColor="initial";
+        }
+        name=document.myForm1.u_npsw.value;
+        if(name==""){
+            document.getElementById("c_npsw").innerHTML="please select the hobbies";
+            document.myForm1.u_npsw.style.borderColor="red";
+            flag++;
+        }
+        else{
+            document.getElementById("c_npsw").innerHTML="";
+            document.myForm1.u_npsw.style.borderColor="initial";
+        }
+       
+        name=document.myForm1.Gender.value;
+        if(name==""){
+            document.getElementById("c_gender").innerHTML="please enter the gender";
+            document.getElementById("c_gender1").style.color="red";
+            flag++;
+            return false;
+        }
+        else{
+            document.getElementById("c_gender").innerHTML="";
+            document.getElementById("c_gender1").style.color="initial";
+        }
+       if(flag>0){
+    }
+    return true;
+}
+</script>
+    
+    </head>
+    <body>
+      
+        <table width="100%" cellspacing="0"height="100px">
+          <form action="#" name="myForm" onsubmit="return validate_lg();">
+            <tr bgcolor="#3b5998">
+                <td width=""><img src="img/logo.png" width="220"></td>
+                <td style="width:176px;color: white;height: 110px;">Email or phone<br>
+                    <input type="text" name="c_name" value="">
+                    <label  style="color: red;" id="u_name"></label></td>
+                <td style="width: 176px;color: white;">Password<br>
+                     <input type="text"name="c_psw" value="">
+                     <label style="color: red;" id="u_psw"></label></td>  
+                     <td><input type="submit" value="LOGIN" ></td>      
+            </tr>
+          </form>
+        </table>
+      
+        <table width="100%" bgcolor="#edf0f5">
+            <tr height="600px"width="400px">
+             <td valign="top" align="center" style="width: 47%"><br><br>
+                    <table border="0" width="50%"height="40%" >
+                        <tr>
+                            <td>
+                                <font size=6 face="verdana" >Connect with friends and tye world around youon Facebook</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><br><br>
+                            <img src="img/connect.png" width="" height=""></td>
+                        </tr>
+                    </table>
+                    </td>
+                    
+                    <td valign="top" align="center">
+                      <form action="#" name="myForm1" onsubmit="return validate();">
+                        <table border="0" cellspacing="20"> 
+                            <tr><td>
+                                 <b style="font-size: 25px;  font-family: 'Lucida Sans' 'Lucida Grande', 'Lucida Sans Unicode';" >Create an account</b><br>
+                                 <b style="font-size: 10px;">Its free and always will be.</b></td></tr>
+                                            
+                            </tr>   
+                            <tr>
+                                <td>
+                                <input type="text" class="name1" name="u_first" placeholder="First name" size="25"style="height:28px;">
+                                <label id="c_first"></label>
+                                <input type="text" class="name1" name="u_last" placeholder="Surname" size="25" style="width: 201px;height: 28px;">
+                                <label id="c_last"></label>
+                               </td>         
+                            </tr>
+                            <tr>
+                                <td ><input type="email" class="name1" name="u_email" placeholder="Mobile number or email address"  size="55" style="width: 404px;height: 28px;">
+                                <label id="c_email"></label></td>
+                            </tr>
+                            <tr>
+                                <td ><input type="text" class="name1" name="u_npsw"placeholder="New password" style="width:404px;height: 28px;">
+                                <label id="c_npsw"></label></td>
+                            </tr>
+                            <tr>
+                                <td><b style="font-family: serif;">Birthday</b></td>
+                            </tr>   
+                            <tr class="s">  
+                                <td><select style="height: 31px; border-radius:7px;">
+                                    <option>Day</option>
+                                    <option>Day</option>
+                                    <option>Day</option>
+                                    <option>Day</option>
+                                </select>
+                                <select style="height: 31px; border-radius:7px;">
+                                    <option>Day</option>
+                                    <option>Day</option>
+                                    <option>Day</option>
+                                    <option>Day</option>
+                                </select>
+                                <select style="height: 31px; border-radius:7px;">
+                                    <option>Day</option>
+                                    <option>Day</option>
+                                    <option>Day</option>
+                                    <option>Day</option>
+                                    </select>
+                                    <a href="" class="f">Why do I need to provide my <br>
+                                            date of birth</a></td>
+                            </tr>
+                            <tr>
+                                <td><label id="c_gender1">
+                                    <input type="radio" name="Gender" value="male">Male
+                                    <input type="radio" name="Gender" value="female">Female
+                                    </label></td>
+                                    <td><label id="c_gender"></label></td>
+                                
+                            </tr>
+                            <tr><td class="text_last">By clicking our content you are agreed to our <a href="">Terms</a> and <br>
+                                Confirm that you have read our <a href="">Data Policy</a> , including our<br>
+                            <a href="">Cookie use Policy</a>.You may recieve SMS notifications<br>
+                                from Facebook and can opt out at any time.</td></tr>
+                            <tr>
+                                <td><input type="submit" class="btn" value="Create an account"></td>
+                            </tr>
+                        </table>
+                      </form>
+                  </td>
+            </tr>
+        </table>
+        -->
+        
+    </body> 
+</html>

@@ -1,0 +1,27 @@
+j1
+---
+select Name,Course from tbl_student join tbl_grade on tbl_student.Roll_NO=tbl_grade.Roll_NO where Grade='A';
+
+j2
+---
+select count(Name) from tbl_student join tbl_grade on tbl_student.Roll_NO=tbl_grade.Roll_NO where Grade='B';
+
+j3
+---
+ select Name,tbl_grade.Roll_NO,count(Course) as Number_of_course from tbl_student join tbl_grade on tbl_student.Roll_NO=tbl_grade.Roll_NO group by name;
+
+j4
+---
+select Name from tbl_student join tbl_grade on tbl_student.Roll_NO=tbl_grade.ROll_NO where City="Bangalore" and Course="Java";
+
+j5
+---
+select Name,Course from tbl_student join tbl_grade on tbl_student.Roll_NO=tbl_grade.ROll_NO where Name Like 'a%';
+
+j6
+----
+ select Name,timestampdiff(year,dob,curdate()) as age from tbl_student;
+
+j7
+----
+select Name,date_format(dob,'%e-%b-%Y')dob from tbl_student;

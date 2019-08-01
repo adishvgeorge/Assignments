@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('#p1').css("background-color","red");
+    $('#p2').css("background-color","green");
+    $('#p3').css("background-color","blue");
+    $('#p4').css("background-color","white");
+   $('button').click(function(){
+    $('p').css({'background-color':'yellow','fontSize':'35px'});
+    
+   });
+
+});
+</script>
+</head>
+<body>
+    <h1>This is a heading</h1>
+    <p id="p1">This is a paragraph</p>
+    <p id="p2">This is a paragraph</p>
+    <p id="p3">This is a paragraph</p>
+    <p id="p4">This is a paragraph</p>
+<button>Set multiple style of p</button>
+</body>
+</html>

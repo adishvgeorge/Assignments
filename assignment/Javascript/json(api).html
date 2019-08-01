@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+             $.ajax({
+                 url:'http://dummy.restapiexample.com/api/v1/employees',
+                 type:'GET',
+                 data:{},
+                 success:function(emp){
+                    console.log(emp); 
+                 },
+                 error:function(error){
+                     console.log(error);
+                 }
+             });
+            });
+            </script>
+    </head>
+    <body>
+
+    </body>
+</html>

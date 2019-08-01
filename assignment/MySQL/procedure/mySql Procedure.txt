@@ -1,0 +1,46 @@
+P1
+----
+ create table tbl_student (pk_int_roll_no int(11) auto_increment,int_enrollment_no int(11),vchr_name varchar(20),vchr_city varchar(20),vchr_mobileno varchar(15),dat_dob date,bln_status varchar(20),primary key(pk_int_roll_no));
+
+p2
+---
+ create table tbl_grade(fk_int_roll_no int(11),vchr_course varchar(20),vchr_grade char(1),foreign key(fk_int_roll_no) references tbl_student(pk_int_roll_no));
+
+p3
+---
+delimiter //
+create procedure putStudent (IN roll int,IN enroll int,IN name varchar,IN city varchar,IN mobile varchar,IN dob date,IN status varchar)
+begin
+declare i int;
+set i=0;
+while (i<=10) do 
+insert into tbl_student values(roll,enroll,name,city,mobile,dob,status);
+set i=i+1;
+end while;
+end //
+delimiter ;
+call putStudent('','101','adish','calicut','973645367',"1997-12-26",'present');
+select * from tbl_student;
+
+select count(vchr_name) as count from tbl_student;
+
+p4
+----
+delimiter //
+create procedure putGrade1 (IN roll int,IN course varchar(20),IN grade char)
+begin
+declare i int;
+set i=0;
+while (i<=10) do 
+insert into tbl_grade values(roll,course,grade);
+set i=i+1;
+end while;
+end //
+delimiter ;
+call putGrade1('1','BCA','A');
+select * from tbl_grade;
+
+select count(vchr_course) as count from tbl_grade;
+
+p5
+----

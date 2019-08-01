@@ -1,0 +1,46 @@
+DML1
+----
+insert into tbl_stock values('','Mouse','10','500','1');
+insert into tbl_stock values('','Keyboard','5','450','3');
+insert into tbl_stock values('','Modem','10','1200','2');
+insert into tbl_stock values('','Memory','100','1500','5');
+insert into tbl_stock values('','Headphone','50','750','4');
+insert into tbl_stock values('','Memory','2','3500','4');
+
+DML2
+-----
+update tbl_stock set int_price=int_price+1.5;
+
+DML3
+-----
+select * from tbl_stock where int_price>1000;
+
+DML4
+-----
+select * from tbl_stock order by vchr_name asc;
+
+DML5
+-----
+ select * from tbl_stock group by vchr_name asc limit 3;
+
+DML6
+-----
+select * from tbl_stock group by vchr_name desc limit 3;
+
+DML7
+----
+select vchr_name,int_Quantity,int_price,int_Quantity*int_price from tbl_stock;
+
+DML8
+-----
+delete from tbl_stock where fk_int_supplier=5;
+
+DML9
+-----
+insert into tbl_dept values('','Computer Science','CS');
+
+insert into tbl_dept values('','Electronics','EC');
+
+insert into tbl_dept values('','Commerce','CC');
+
+insert into tbl_dept values('','Arts','AR');

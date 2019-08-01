@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  /* $('#left').click(function(){
+       $('.box').animate({
+           left:"-=40px",
+           fontSize:"-=2px"
+       }, function(){
+
+       });
+   });*/
+   $('#right').click(function(){
+       $('.box').animate({
+           left:"+=40px",
+           fontSize:"+=2px"
+       }, function(){
+
+       });
+   });
+});
+</script>
+<style>
+.box{
+    height:100px;
+    width: 100px;
+    background: #a7f;
+    color: beige;
+    border: solid 2px black;
+    margin: 50px;
+    position: relative;
+    text-align: center;
+    line-height: 100px;
+    
+}
+
+#right{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    top: 20px;
+    left: 650px;
+    background: white;
+    color:red;
+    margin: 100px auto 0;
+    border: solid 2px black;
+}
+</style>
+</head>
+<body>
+<div class="box">the Box!</div>
+
+<button id="right">&rarr;</button>
+</body>
+</html>
